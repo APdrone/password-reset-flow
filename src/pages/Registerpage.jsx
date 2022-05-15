@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { setUserEmail } from "../store/UserSlice";
+// import { setUserEmail } from "../store/UserSlice";
 
 const RegisterPage = () => {
   const [mail, setMail] = useState("");
@@ -43,8 +43,8 @@ const RegisterPage = () => {
 
         const data = await res.json();
         // console.log(data.newUser);
-        dispatch(setUserEmail(data.newUser.email));
-        navigate("/home");
+        // dispatch(setUserEmail(data.newUser.email));
+        if (data) navigate("/home");
         setError(false);
       }
     } catch (err) {
