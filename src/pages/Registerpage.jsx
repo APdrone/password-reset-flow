@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 // import { setUserEmail } from "../store/UserSlice";
 
@@ -10,7 +10,7 @@ const RegisterPage = () => {
   const [error, setError] = useState(false);
   const [msg, setMsg] = useState("");
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleRegistration = async (e) => {
